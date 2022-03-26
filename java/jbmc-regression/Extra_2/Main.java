@@ -5,15 +5,16 @@ import org.sosy_lab.sv_benchmarks.Verifier;
 
 public class Main {
   public static void main(String[] args) {
-    String x = new String();
+    StringBuilder x = new StringBuilder();
     
     while (Verifier.nondetBoolean()) {
-      x = x.concat("hello");
+        x = x.append("hello");
     }
 
-    if (x.length() > 0) {
-        assert(x.startsWith("hello"));
-        assert(x.endsWith("hello"));
+    String y = x.toString();
+    if (y.length() > 0) {
+        assert(y.startsWith("hello"));
+        assert(y.endsWith("hello"));
     }
   }
 }
