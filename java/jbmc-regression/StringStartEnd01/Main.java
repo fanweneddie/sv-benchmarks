@@ -7,25 +7,15 @@
  * The benchmark was taken from the repo: 24 January 2018
  */
 public class Main {
-  public static void main(String[] args) {
-    String[] strings = {"tested", "testing", "passed", "passing"};
+  public static void main() {
+    String string = "tested"; 
 
-    int i = 0;
-    for (String string : strings) {
-      if (string.startsWith("te")) ++i;
-    }
-    assert i == 2;
+    assert string.startsWith("te");
+    assert string.startsWith("tested");
+    assert !string.startsWith("tet");
 
-    i = 0;
-    for (String string : strings) {
-      if (string.startsWith("ste", 2)) ++i;
-    }
-    assert i == 1;
-
-    i = 0;
-    for (String string : strings) {
-      if (string.endsWith("ed")) ++i;
-    }
-    assert i == 2;
+    assert string.endsWith("ed");
+    assert string.endsWith("tested");
+    assert !string.endsWith("tet");
   }
 }

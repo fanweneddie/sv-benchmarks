@@ -6,7 +6,8 @@ import org.sosy_lab.sv_benchmarks.Verifier;
 public class Main {
   public static void main(String[] args) {
     String x;
-    if (Verifier.nondetBoolean()) {
+    boolean temp = Verifier.nondetBoolean();
+    if (temp) {
         x = "ab";
     } else {
         x = "bb";

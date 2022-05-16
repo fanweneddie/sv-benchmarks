@@ -10,7 +10,8 @@ import org.sosy_lab.sv_benchmarks.Verifier;
 
 public class Main {
   public static void main(String[] args) {
-    StringBuilder buffer = new StringBuilder(Verifier.nondetString());
+    String temp = Verifier.nondetString();
+    StringBuilder buffer = new StringBuilder(temp);
     assert buffer.charAt(0) == buffer.charAt(4);
   }
 }

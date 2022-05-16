@@ -7,7 +7,7 @@
  * The benchmark was taken from the repo: 24 January 2018
  */
 public class Main {
-  public static void main(String[] args) {
+  public static void main() {
     String s1 = new String("test");
     String s2 = "goodbye";
     String s3 = "Automatic Test Generation";

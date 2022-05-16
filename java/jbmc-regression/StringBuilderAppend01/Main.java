@@ -7,7 +7,7 @@
  * The benchmark was taken from the repo: 24 January 2018
  */
 public class Main {
-  public static void main(String[] args) {
+  public static void main() {
     Object objectRef = "diffblue";
     String string = "test";
     char[] charArray = {
@@ -24,7 +24,7 @@ public class Main {
     StringBuilder lastBuffer = new StringBuilder("last buffer");
     StringBuilder buffer = new StringBuilder();
 
-    buffer
+    StringBuilder newBuffer = buffer
         .append(objectRef)
         .append("%n")
         .append(string)
@@ -47,7 +47,7 @@ public class Main {
         .append("%n")
         .append(lastBuffer);
 
-    String tmp = buffer.toString();
+    String tmp = newBuffer.toString();
     assert tmp.equals(
         "diffblue%ntest%nverification%nver%ntrue%nZ%n7%n10000000000%n2.5%n33.333%nlast buffer");
   }

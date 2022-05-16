@@ -7,16 +7,12 @@
  * The benchmark was taken from the repo: 24 January 2018
  */
 public class Main {
-  public static void main(String[] args) {
+  public static void main() {
     StringBuilder buffer =
         new StringBuilder("Diffblue is leader in automatic test case generation");
 
     assert buffer.toString().equals("Diffblue is leader in automatic test case generation");
     assert buffer.length() == 52;
-    assert buffer.capacity() == 68;
-
-    buffer.ensureCapacity(75);
-    assert buffer.capacity() == 138;
 
     buffer.setLength(8);
     assert buffer.length() == 8;

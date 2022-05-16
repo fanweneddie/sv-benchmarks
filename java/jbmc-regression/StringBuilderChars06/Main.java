@@ -9,8 +9,9 @@
 import org.sosy_lab.sv_benchmarks.Verifier;
 
 public class Main {
-  public static void main(String[] args) {
-    StringBuilder buffer = new StringBuilder(Verifier.nondetString());
+  public static void main() {
+    String temp = Verifier.nondetString();
+    StringBuilder buffer = new StringBuilder(temp);
     buffer.reverse();
     assert buffer.toString().equals("detimiL eTlBffiiH");
   }

@@ -6,11 +6,11 @@
  *     directory: regression/jbmc-strings/StringConcatenation01
  * The benchmark was taken from the repo: 24 January 2018
  */
-import org.sosy_lab.sv_benchmarks.Verifier;
+//import org.sosy_lab.sv_benchmarks.Verifier;
 
 public class Main {
-  public static void main(String[] args) {
-    args = new String[2];
+  public static void main() {
+    String[] args = new String[2];
     args[0] = Verifier.nondetString();
     args[1] = Verifier.nondetString();
 
@@ -19,11 +19,15 @@ public class Main {
 
     assert s1.equals(args[0]);
     assert s2.equals(args[1]);
+    
+    String s3 = s1;
+    String s4 = s2;
 
-    String tmp = s1.concat(s2);
-    assert tmp.equals(args[0] + args[1]);
+    String tmp2 = s1.concat(s2);
+    String tmp3 = s3.concat(s4);
+    assert tmp2.equals(tmp3);
 
-    tmp = s1;
-    assert tmp.equals(args[0]);
+    tmp2 = s1;
+    assert tmp2.equals(args[0]);
   }
 }

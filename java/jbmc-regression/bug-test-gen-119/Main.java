@@ -9,7 +9,7 @@
 import org.sosy_lab.sv_benchmarks.Verifier;
 
 public class Main {
-  public static void main(String[] args) {
+  public static void main() {
     boolean booleanValue = Verifier.nondetBoolean();
 
     String tmp = String.valueOf(booleanValue);
