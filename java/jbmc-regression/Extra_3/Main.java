@@ -8,9 +8,9 @@ public class Main {
     String temp = Verifier.nondetString();
     StringBuilder x = new StringBuilder(temp);
     
-    if (x.charAt(0) == 'b') {
+    if (x.startsWith("b")) {
         x.reverse();
-        assert(x.charAt(x.length() - 1) == 'b');
+        assert(x.endsWith("b"));
     }
   }
 }

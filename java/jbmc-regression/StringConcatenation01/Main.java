@@ -10,24 +10,16 @@
 
 public class Main {
   public static void main() {
-    String[] args = new String[2];
-    args[0] = Verifier.nondetString();
-    args[1] = Verifier.nondetString();
+    String s1 = Verifier.nondetString();
+    String s2 = Verifier.nondetString();
 
-    String s1 = args[0];
-    String s2 = args[1];
-
-    assert s1.equals(args[0]);
-    assert s2.equals(args[1]);
-    
-    String s3 = s1;
-    String s4 = s2;
-
-    String tmp2 = s1.concat(s2);
-    String tmp3 = s3.concat(s4);
-    assert tmp2.equals(tmp3);
-
-    tmp2 = s1;
-    assert tmp2.equals(args[0]);
+    if (s2.equals("hello")) {
+	assert s2.equals("hello");
+	
+	String s3 = s1;
+	String concat1 = s1.concat(s2);
+	String concat2 = s3.concat("hello");
+	assert concat1.equals(concat2);
+    }
   }
 }
